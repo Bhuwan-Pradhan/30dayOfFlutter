@@ -9,21 +9,19 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    
     return MaterialApp(
       //home: HomePage(),
       themeMode: ThemeMode.light,
       theme: ThemeData(
-       primarySwatch: Colors.deepPurple
+        primarySwatch: Colors.deepPurple,
+        //fontFamily:
       ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark
-      ),
-      initialRoute: "/home",
+      darkTheme: ThemeData(brightness: Brightness.dark),
+      initialRoute: "/login",
       routes: {
-        "/" :(context) => LoginPage(),
-        "/home" :(context) => HomePage(),
-        "/login" :(context) => LoginPage()
+        "/": (context) => LoginPage(),
+        "/home": (context) => HomePage(),
+        "/login": (context) => LoginPage()
       },
     );
   }
